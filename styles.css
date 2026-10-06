@@ -1,182 +1,124 @@
 /* Reset CSS */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    padding-top: 60px; /* Đẩy nội dung xuống bên dưới Fixed Header */
-}
-
-/* 1. Fixed Header cố định ở đỉnh trang */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 56px;
-    background-color: #ffffff;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 16px;
-    z-index: 1000;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo {
-    color: #1877f2;
-    font-size: 24px;
-}
-
-.search-bar {
-    padding: 8px 12px;
-    border-radius: 20px;
-    border: none;
-    background-color: #f0f2f5;
-}
-
-.header-center a {
-    text-decoration: none;
-    color: #65676b;
-    font-weight: bold;
-    margin: 0 15px;
-}
-
-.header-center a.active {
-    color: #1877f2;
-}
-
-.user-avatar {
-    width: 36px;
-    height: 36px;
-    background-color: #e4e6eb;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-}
-
-/* 2. Bố cục 3 cột (Layout main) */
-.main-layout {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-}
-
-/* Sidebar bên trái và bên phải cố định chiều rộng */
-.sidebar-left, .sidebar-right {
-    width: 280px;
-    position: sticky;
-    top: 72px; /* Cố định vị trí khi cuộn trang */
-    height: calc(100vh - 80px);
-}
-
-.sidebar-left ul, .sidebar-right ul {
-    list-style: none;
-}
-
-.sidebar-left li, .sidebar-right li {
+    line-height: 1.6;
+    background-color: #f4f4f4;
     padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
-.sidebar-left li:hover, .sidebar-right li:hover {
-    background-color: #e4e6eb;
+/* 1. Định dạng Header */
+.header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
-.sidebar-right h3 {
-    color: #65676b;
-    font-size: 16px;
+/* 2. Định dạng Navigation Bar */
+.navbar {
+    background-color: #34495e;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+/* 3. Định dạng Khối Main (Sử dụng Flexbox) */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
-/* 3. Phần nội dung chính (Feed) nằm ở giữa */
-.content-feed {
-    flex: 1;
-    max-width: 680px;
-    margin: 0 20px;
-}
-
-.create-post {
+/* Cột Nội dung chính */
+.content {
+    flex: 3;
     background-color: #ffffff;
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.create-post input {
-    width: 100%;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: none;
-    background-color: #f0f2f5;
-}
-
-.post {
-    background-color: #ffffff;
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.post-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
-}
-
-.post-avatar {
-    width: 40px;
-    height: 40px;
-    background-color: #1877f2;
-    border-radius: 50%;
-}
-
-.post-author {
-    font-weight: bold;
-}
-
-.post-time {
-    font-size: 12px;
-    color: #65676b;
-}
-
-.post-body {
-    margin-bottom: 12px;
-}
-
-.post-footer {
-    display: flex;
-    border-top: 1px solid #e4e6eb;
-    padding-top: 8px;
-}
-
-.post-footer button {
-    flex: 1;
-    background: none;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
+    padding: 20px;
+    border: 1px solid #dddddd;
     border-radius: 4px;
-    color: #65676b;
-    font-weight: bold;
+    min-width: 280px;
 }
 
-.post-footer button:hover {
-    background-color: #f0f2f5;
+.content h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Cột Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #e8ecef;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* 4. Định dạng Footer */
+.footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* 5. Cấu hình Responsive với Media Query (Màn hình dưới 768px) */
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Chuyển các khối thành 1 cột dọc trên Mobile */
+    }
+
+    .navbar a {
+        float: none;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #4a6278;
+    }
 }

@@ -3,99 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giao diện Facebook Giản Lược</title>
+    <title>Bố Cục Responsive bằng DIV và CSS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Fixed Header ở trên cùng -->
-    <header class="header">
-        <div class="header-left">
-            <h1 class="logo">facebook</h1>
-            <input type="text" placeholder="Tìm kiếm trên Facebook..." class="search-bar">
-        </div>
-        <div class="header-center">
-            <a href="#" class="active">Trang chủ</a>
-            <a href="#">Bạn bè</a>
-            <a href="#">Trò chơi</a>
-        </div>
-        <div class="header-right">
-            <div class="user-avatar">User</div>
-        </div>
-    </header>
+    <!-- Khối Đầu Trang (Header) -->
+    <div class="header">
+        <h1>Tiêu Đề Trang Web (Header)</h1>
+    </div>
 
-    <!-- Bố cục chính chứa Sidebar và Feed nội dung -->
-    <div class="main-layout">
+    <!-- Khối Thanh Điều Hướng (Navigation Bar) -->
+    <div class="navbar">
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Tin tức</a>
+        <a href="#">Liên hệ</a>
+    </div>
+
+    <!-- Khối Nội Dung Chính (Main Area) -->
+    <div class="main-container">
         
-        <!-- Sidebar bên trái -->
-        <aside class="sidebar-left">
+        <!-- Cột Nội Dung Bài Viết Chính -->
+        <div class="content">
+            <h2>Nội Dung Chính</h2>
+            <p>Đây là phần nội dung chính của trang web được đặt trong thẻ DIV. Bố cục này sử dụng CSS Flexbox kết hợp Media Query để tự động điều chỉnh hiển thị linh hoạt (Responsive) trên nhiều thiết bị từ Máy tính, Máy tính bảng cho đến Điện thoại di động.</p>
+            <p>Khi màn hình thu nhỏ dưới 768px, cột nội dung và cột bên sẽ tự động chuyển từ nằm ngang sang dạng xếp chồng chiều dọc.</p>
+        </div>
+
+        <!-- Cột Bên (Sidebar) -->
+        <div class="sidebar">
+            <h3>Cột Bên (Sidebar)</h3>
             <ul>
-                <li><strong>Trần Văn A</strong></li>
-                <li>Bạn bè</li>
-                <li>Bảng feeds</li>
-                <li>Nhóm</li>
-                <li>Kỷ niệm</li>
-                <li>Đã lưu</li>
+                <li><a href="#">Danh mục sản phẩm 1</a></li>
+                <li><a href="#">Danh mục sản phẩm 2</a></li>
+                <li><a href="#">Danh mục sản phẩm 3</a></li>
+                <li><a href="#">Tin tức nổi bật</a></li>
             </ul>
-        </aside>
+        </div>
 
-        <!-- Phần nội dung chính (Feed bài đăng) -->
-        <main class="content-feed">
-            
-            <!-- Ô tạo bài viết -->
-            <div class="create-post">
-                <input type="text" placeholder="A ơi, bạn đang nghĩ gì thế?">
-            </div>
+    </div>
 
-            <!-- Danh sách bài đăng -->
-            <article class="post">
-                <div class="post-header">
-                    <div class="post-avatar"></div>
-                    <div>
-                        <p class="post-author">Nguyễn Văn B</p>
-                        <span class="post-time">2 giờ trước</span>
-                    </div>
-                </div>
-                <div class="post-body">
-                    <p>Hôm nay trời đẹp quá, vừa hoàn thành bài tập giao diện Facebook bằng HTML5 và CSS!</p>
-                </div>
-                <div class="post-footer">
-                    <button>Thích</button>
-                    <button>Bình luận</button>
-                    <button>Chia sẻ</button>
-                </div>
-            </article>
-
-            <article class="post">
-                <div class="post-header">
-                    <div class="post-avatar"></div>
-                    <div>
-                        <p class="post-author">CodeGym Vietnam</p>
-                        <span class="post-time">5 giờ trước</span>
-                    </div>
-                </div>
-                <div class="post-body">
-                    <p>Thực hành tạo bố cục Web với Header cố định (position: fixed) và Sidebar Flexbox.</p>
-                </div>
-                <div class="post-footer">
-                    <button>Thích</button>
-                    <button>Bình luận</button>
-                    <button>Chia sẻ</button>
-                </div>
-            </article>
-
-        </main>
-
-        <!-- Sidebar bên phải (Người liên hệ) -->
-        <aside class="sidebar-right">
-            <h3>Người liên hệ</h3>
-            <ul>
-                <li>Lê Thị C</li>
-                <li>Pham Văn D</li>
-                <li>Hoàng Thị E</li>
-            </ul>
-        </aside>
-
+    <!-- Khối Chân Trang (Footer) -->
+    <div class="footer">
+        <p>&copy; Bản quyền thuộc về Lập Trình Web - CodeGym</p>
     </div>
 
 </body>
