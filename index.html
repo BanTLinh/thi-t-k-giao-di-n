@@ -1,81 +1,35 @@
-<!DOCTYPE html>
-<html lang="vi">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Xem Hoạt Hình Trực Tuyến</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="text-center">
 
-    <!-- 1. PHẦN HEADER (Cố định ở trên cùng) -->
-    <div class="header">
-        <div class="logo">
-            <h2>🎬 HOẠT HÌNH HD</h2>
+    <form class="form-signin">
+        <img class="mb-4" src="bootstrap.png" alt="Bootstrap" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
         </div>
-        <div class="search-box">
-            <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
-            <button>Tìm</button>
-        </div>
-    </div>
+        <button class="btn btn-lg btn-primary btn-block w-100" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
 
-    <!-- 2. PHẦN HEAD-LINK (Thanh điều hướng liên kết) -->
-    <div class="head-link">
-        <a href="#" class="active">Trang Chủ</a>
-        <a href="#">Phim Mới Cập Nhật</a>
-        <a href="#">Xem Nhiều Nhất</a>
-        <a href="#">Hoạt Hình Thuyết Minh</a>
-        <a href="#">Liên Hệ</a>
-    </div>
-
-    <!-- 3. PHẦN CONTENT (Nội dung chính dạng 2 cột) -->
-    <div class="container">
-        
-        <!-- Left Content: Menu danh sách phim -->
-        <div class="left-content">
-            <h3>Danh Sách Phim</h3>
-            <ul class="video-list">
-                <li><a href="#player" class="video-item active">1. Doraemon - Đô-rê-mon Thuyết Minh HD</a></li>
-                <li><a href="#player" class="video-item">2. Tom & Jerry - Tập Mới Nhất</a></li>
-                <li><a href="#player" class="video-item">3. Conan - Thám Tử Lừng Danh</a></li>
-                <li><a href="#player" class="video-item">4. Dragon Ball - Bảy Viên Ngọc Rồng</a></li>
-                <li><a href="#player" class="video-item">5. Naruto - Trận Chiến Cực Đỉnh</a></li>
-            </ul>
-        </div>
-
-        <!-- Right Content: Khung xem video phát phim -->
-        <div class="right-content" id="player">
-            <h2 class="video-title">Doraemon: Tập Đặc Biệt Thuyết Minh HD</h2>
-            
-            <!-- Nhúng Youtube Video bằng iframe -->
-            <div class="video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                    title="YouTube video player" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-
-            <!-- Thẻ HTML5 <video> dự phòng cho máy chủ nội bộ -->
-            <div class="local-video-section">
-                <h3>Video Tải Nhanh (Server Gốc HD)</h3>
-                <video controls width="100%">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
-                </video>
-            </div>
-
-            <p class="video-description">
-                <strong>Mô tả:</strong> Phim hoạt hình chất lượng cao HD 1080p, audio thuyết minh tiếng Việt chuẩn, tải nhanh chống giật lag và không có quảng cáo.
-            </p>
-        </div>
-
-    </div>
-
-    <!-- 4. PHẦN FOOTER (Thông tin bản quyền) -->
-    <div class="footer">
-        <p>&copy; 2026 Website Hoạt Hình Trực Tuyến - Tải Nhanh, Không Quảng Cáo. Bản quyền thuộc về CodeGym.</p>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 </body>
 </html>
