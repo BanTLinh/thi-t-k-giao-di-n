@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Đưa padding và margin của menu về 0 */
+#menu, #menu ul, #menu li {
+    padding: 0;
+    margin: 0;
+}
+
+/* Định dạng các mục danh sách trong menu */
+#menu li {
+    list-style: none;
+    position: relative;
+    width: 140px;
+    height: 30px;
+    padding: 0 20px;
+    background-color: black;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+/* Định dạng thẻ liên kết a trong menu */
+#menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* Thay đổi màu nền khi di chuột qua mục menu */
+#menu li:hover {
+    background-color: red;
+}
+
+/* Định dạng vị trí và ẩn menu con */
+#menu ul ul {
+    position: absolute;
+    top: 0;
+    left: 180px; /* Đặt menu con nằm sát cạnh phải của menu cha (140px width + 40px padding) */
+    visibility: hidden;
+}
+
+/* Hiển thị menu con khi di chuột vào mục menu cha */
+#menu ul li:hover ul {
+    visibility: visible;
+}
