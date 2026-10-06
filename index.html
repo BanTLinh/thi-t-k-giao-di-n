@@ -3,57 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục trang web HTML5</title>
+    <title>Giao diện Facebook Giản Lược</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Đầu trang -->
-    <header>
-        <h1>Trang Web Bố Cục HTML5</h1>
+    <!-- Fixed Header ở trên cùng -->
+    <header class="header">
+        <div class="header-left">
+            <h1 class="logo">facebook</h1>
+            <input type="text" placeholder="Tìm kiếm trên Facebook..." class="search-bar">
+        </div>
+        <div class="header-center">
+            <a href="#" class="active">Trang chủ</a>
+            <a href="#">Bạn bè</a>
+            <a href="#">Trò chơi</a>
+        </div>
+        <div class="header-right">
+            <div class="user-avatar">User</div>
+        </div>
     </header>
 
-    <!-- Thanh điều hướng -->
-    <nav>
-        <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Dịch vụ</a></li>
-            <li><a href="#">Tin tức</a></li>
-            <li><a href="#">Liên hệ</a></li>
-        </ul>
-    </nav>
-
-    <!-- Khối nội dung chính chứa Section và Aside -->
-    <div class="container">
+    <!-- Bố cục chính chứa Sidebar và Feed nội dung -->
+    <div class="main-layout">
         
-        <!-- Khu vực nội dung bài viết chính -->
-        <section>
-            <h2>Nội Dung Chính (Section)</h2>
+        <!-- Sidebar bên trái -->
+        <aside class="sidebar-left">
+            <ul>
+                <li><strong>Trần Văn A</strong></li>
+                <li>Bạn bè</li>
+                <li>Bảng feeds</li>
+                <li>Nhóm</li>
+                <li>Kỷ niệm</li>
+                <li>Đã lưu</li>
+            </ul>
+        </aside>
+
+        <!-- Phần nội dung chính (Feed bài đăng) -->
+        <main class="content-feed">
             
-            <article>
-                <h3>Bài viết 1 (Article)</h3>
-                <p>Nội dung bài viết sử dụng thẻ article ngữ nghĩa HTML5 độc lập.</p>
+            <!-- Ô tạo bài viết -->
+            <div class="create-post">
+                <input type="text" placeholder="A ơi, bạn đang nghĩ gì thế?">
+            </div>
+
+            <!-- Danh sách bài đăng -->
+            <article class="post">
+                <div class="post-header">
+                    <div class="post-avatar"></div>
+                    <div>
+                        <p class="post-author">Nguyễn Văn B</p>
+                        <span class="post-time">2 giờ trước</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>Hôm nay trời đẹp quá, vừa hoàn thành bài tập giao diện Facebook bằng HTML5 và CSS!</p>
+                </div>
+                <div class="post-footer">
+                    <button>Thích</button>
+                    <button>Bình luận</button>
+                    <button>Chia sẻ</button>
+                </div>
             </article>
 
-            <article>
-                <h3>Bài viết 2 (Article)</h3>
-                <p>Sử dụng các thẻ HTML5 ngữ nghĩa giúp máy chấm điểm và SEO hiểu rõ cấu trúc trang web.</p>
+            <article class="post">
+                <div class="post-header">
+                    <div class="post-avatar"></div>
+                    <div>
+                        <p class="post-author">CodeGym Vietnam</p>
+                        <span class="post-time">5 giờ trước</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>Thực hành tạo bố cục Web với Header cố định (position: fixed) và Sidebar Flexbox.</p>
+                </div>
+                <div class="post-footer">
+                    <button>Thích</button>
+                    <button>Bình luận</button>
+                    <button>Chia sẻ</button>
+                </div>
             </article>
-        </section>
 
-        <!-- Thanh nội dung bên cạnh -->
-        <aside>
-            <h3>Thanh Bên (Aside)</h3>
-            <p>Nội dung bổ sung, quảng cáo hoặc liên kết phụ.</p>
+        </main>
+
+        <!-- Sidebar bên phải (Người liên hệ) -->
+        <aside class="sidebar-right">
+            <h3>Người liên hệ</h3>
+            <ul>
+                <li>Lê Thị C</li>
+                <li>Pham Văn D</li>
+                <li>Hoàng Thị E</li>
+            </ul>
         </aside>
 
     </div>
-
-    <!-- Chân trang -->
-    <footer>
-        <p>&copy; Bản quyền thuộc về Lập Trình Web HTML5/CSS</p>
-    </footer>
 
 </body>
 </html>
