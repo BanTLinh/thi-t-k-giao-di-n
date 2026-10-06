@@ -3,51 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố Cục Responsive bằng DIV và CSS</title>
+    <title>Trang Web Xem Hoạt Hình Trực Tuyến</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Khối Đầu Trang (Header) -->
+    <!-- 1. PHẦN HEADER (Cố định ở trên cùng) -->
     <div class="header">
-        <h1>Tiêu Đề Trang Web (Header)</h1>
-    </div>
-
-    <!-- Khối Thanh Điều Hướng (Navigation Bar) -->
-    <div class="navbar">
-        <a href="#">Trang chủ</a>
-        <a href="#">Giới thiệu</a>
-        <a href="#">Sản phẩm</a>
-        <a href="#">Tin tức</a>
-        <a href="#">Liên hệ</a>
-    </div>
-
-    <!-- Khối Nội Dung Chính (Main Area) -->
-    <div class="main-container">
-        
-        <!-- Cột Nội Dung Bài Viết Chính -->
-        <div class="content">
-            <h2>Nội Dung Chính</h2>
-            <p>Đây là phần nội dung chính của trang web được đặt trong thẻ DIV. Bố cục này sử dụng CSS Flexbox kết hợp Media Query để tự động điều chỉnh hiển thị linh hoạt (Responsive) trên nhiều thiết bị từ Máy tính, Máy tính bảng cho đến Điện thoại di động.</p>
-            <p>Khi màn hình thu nhỏ dưới 768px, cột nội dung và cột bên sẽ tự động chuyển từ nằm ngang sang dạng xếp chồng chiều dọc.</p>
+        <div class="logo">
+            <h2>🎬 HOẠT HÌNH HD</h2>
         </div>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
+            <button>Tìm</button>
+        </div>
+    </div>
 
-        <!-- Cột Bên (Sidebar) -->
-        <div class="sidebar">
-            <h3>Cột Bên (Sidebar)</h3>
-            <ul>
-                <li><a href="#">Danh mục sản phẩm 1</a></li>
-                <li><a href="#">Danh mục sản phẩm 2</a></li>
-                <li><a href="#">Danh mục sản phẩm 3</a></li>
-                <li><a href="#">Tin tức nổi bật</a></li>
+    <!-- 2. PHẦN HEAD-LINK (Thanh điều hướng liên kết) -->
+    <div class="head-link">
+        <a href="#" class="active">Trang Chủ</a>
+        <a href="#">Phim Mới Cập Nhật</a>
+        <a href="#">Xem Nhiều Nhất</a>
+        <a href="#">Hoạt Hình Thuyết Minh</a>
+        <a href="#">Liên Hệ</a>
+    </div>
+
+    <!-- 3. PHẦN CONTENT (Nội dung chính dạng 2 cột) -->
+    <div class="container">
+        
+        <!-- Left Content: Menu danh sách phim -->
+        <div class="left-content">
+            <h3>Danh Sách Phim</h3>
+            <ul class="video-list">
+                <li><a href="#player" class="video-item active">1. Doraemon - Đô-rê-mon Thuyết Minh HD</a></li>
+                <li><a href="#player" class="video-item">2. Tom & Jerry - Tập Mới Nhất</a></li>
+                <li><a href="#player" class="video-item">3. Conan - Thám Tử Lừng Danh</a></li>
+                <li><a href="#player" class="video-item">4. Dragon Ball - Bảy Viên Ngọc Rồng</a></li>
+                <li><a href="#player" class="video-item">5. Naruto - Trận Chiến Cực Đỉnh</a></li>
             </ul>
         </div>
 
+        <!-- Right Content: Khung xem video phát phim -->
+        <div class="right-content" id="player">
+            <h2 class="video-title">Doraemon: Tập Đặc Biệt Thuyết Minh HD</h2>
+            
+            <!-- Nhúng Youtube Video bằng iframe -->
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Thẻ HTML5 <video> dự phòng cho máy chủ nội bộ -->
+            <div class="local-video-section">
+                <h3>Video Tải Nhanh (Server Gốc HD)</h3>
+                <video controls width="100%">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+                </video>
+            </div>
+
+            <p class="video-description">
+                <strong>Mô tả:</strong> Phim hoạt hình chất lượng cao HD 1080p, audio thuyết minh tiếng Việt chuẩn, tải nhanh chống giật lag và không có quảng cáo.
+            </p>
+        </div>
+
     </div>
 
-    <!-- Khối Chân Trang (Footer) -->
+    <!-- 4. PHẦN FOOTER (Thông tin bản quyền) -->
     <div class="footer">
-        <p>&copy; Bản quyền thuộc về Lập Trình Web - CodeGym</p>
+        <p>&copy; 2026 Website Hoạt Hình Trực Tuyến - Tải Nhanh, Không Quảng Cáo. Bản quyền thuộc về CodeGym.</p>
     </div>
 
 </body>
