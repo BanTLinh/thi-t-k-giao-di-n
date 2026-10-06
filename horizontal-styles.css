@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Định dạng thanh menu chính */
+#menu {
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    border: 1px solid #CDCDCD;
+}
+
+#menu ul, #menu li {
+    padding: 0;
+    margin: 0;
+}
+
+/* Cho các mục menu cha nằm ngang (float: left) */
+#menu li {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Định dạng thẻ liên kết trong menu cha */
+#menu li a {
+    width: 100px;
+    height: 30px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    background-color: black;
+    color: white;
+}
+
+/* Định dạng riêng cho thẻ liên kết trong menu con */
+#menu ul ul li a {
+    width: 200px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Hiệu ứng đổi màu nền khi di chuột vào liên kết */
+#menu li a:hover {
+    background-color: red;
+}
+
+/* Ẩn menu con và đặt vị trí bên dưới menu cha */
+#menu ul ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    visibility: hidden;
+}
+
+/* Hiển thị menu con khi di chuột vào mục menu cha */
+#menu ul li:hover ul {
+    visibility: visible;
+}
