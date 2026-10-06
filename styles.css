@@ -1,78 +1,84 @@
-/* Styling chung cho trang */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 15px;
-    color: #333333;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* Bước 4: Định dạng ảnh truyện ở đầu trang */
-.story-cover {
-    display: block;
-    margin: 0 auto 20px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Bước 7: Định dạng font chữ, màu sắc và căn giữa tiêu đề */
-.story-title {
-    font-family: 'Georgia', serif;
-    font-size: 32px;
-    color: #2c3e50;
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
-/* Bước 8: Định dạng khung mục lục (border, background-color, padding) */
-.toc-container {
-    border: 2px solid #3498db;
-    background-color: #f8f9fa;
-    padding: 15px 25px;
-    border-radius: 6px;
-    margin-bottom: 30px;
+nav {
+    background-color: #34495e;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
-.toc-title {
-    margin-top: 0;
-    color: #2c3e50;
-    font-size: 18px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Bước 5 & 8: Sử dụng h5 cho mục lục và tạo hiệu ứng hover cho liên kết */
-.toc-container h5 {
-    margin: 10px 0;
-    font-size: 15px;
-    font-weight: normal;
-}
-
-.toc-container a {
-    color: #2980b9;
+nav a {
+    color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.toc-container a:hover {
-    color: #e74c3c;
-    text-decoration: underline;
+nav a:hover {
+    color: #f1c40f;
 }
 
-/* Bước 9: Canh lề, giãn dòng và lùi đầu dòng cho nội dung thân truyện */
-.chapter {
-    margin-bottom: 35px;
-    border-bottom: 1px dashed #cccccc;
-    padding-bottom: 20px;
+.container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
-.chapter h3 {
-    color: #2c3e50;
-    font-size: 20px;
+section {
+    flex: 3;
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-.story-text {
-    line-height: 1.8;       /* Giãn dòng */
-    text-align: justify;    /* Canh lề đều 2 bên */
-    text-indent: 30px;      /* Lùi đầu dòng 30px */
-    font-size: 16px;
-    margin-bottom: 15px;
+article {
+    background: #fafafa;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+aside {
+    flex: 1;
+    background: #e8ecef;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 4px;
 }

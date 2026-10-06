@@ -1,34 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Sử dụng CSS để thay đổi thuộc tính HTML</title>
-    <style>
-        h1 {
-            color: blue;
-            font-family: Tahoma, sans-serif;
-            font-size: 200%;
-        }
-        p {
-            color: red;
-            font-family: Arial, sans-serif;
-            font-size: 120%;
-            border: 1px solid grey;
-            padding: 10px;
-        }
-        #element1 {
-            color: blue;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục trang web HTML5</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>Đây là đề mục</h1>
+    <!-- Đầu trang -->
+    <header>
+        <h1>Trang Web Bố Cục HTML5</h1>
+    </header>
 
-<p>Đây là đoạn văn bản 1.</p>
-<p>Đây là đoạn văn bản 2.</p>
-<p>Đây là đoạn văn bản 3.</p>
-<p id="element1">Đoạn văn bản có thuộc tính id</p>
+    <!-- Thanh điều hướng -->
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Khối nội dung chính chứa Section và Aside -->
+    <div class="container">
+        
+        <!-- Khu vực nội dung bài viết chính -->
+        <section>
+            <h2>Nội Dung Chính (Section)</h2>
+            
+            <article>
+                <h3>Bài viết 1 (Article)</h3>
+                <p>Nội dung bài viết sử dụng thẻ article ngữ nghĩa HTML5 độc lập.</p>
+            </article>
+
+            <article>
+                <h3>Bài viết 2 (Article)</h3>
+                <p>Sử dụng các thẻ HTML5 ngữ nghĩa giúp máy chấm điểm và SEO hiểu rõ cấu trúc trang web.</p>
+            </article>
+        </section>
+
+        <!-- Thanh nội dung bên cạnh -->
+        <aside>
+            <h3>Thanh Bên (Aside)</h3>
+            <p>Nội dung bổ sung, quảng cáo hoặc liên kết phụ.</p>
+        </aside>
+
+    </div>
+
+    <!-- Chân trang -->
+    <footer>
+        <p>&copy; Bản quyền thuộc về Lập Trình Web HTML5/CSS</p>
+    </footer>
 
 </body>
 </html>
