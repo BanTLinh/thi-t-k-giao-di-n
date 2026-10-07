@@ -1,0 +1,104 @@
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ==========================================
+   1. NAVBAR (Flexbox - Bố cục 1D)
+   ========================================== */
+.navbar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #212529;
+    color: #ffffff;
+    padding: 15px 30px;
+}
+
+.navbar-flex .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.navbar-flex .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar-flex .nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-flex .nav-links a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   2. BENTO DASHBOARD (CSS Grid - Bố cục 2D)
+   ========================================== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.widget {
+    background-color: #ffffff;
+    border: 1px solid #e3e6f0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    min-height: 150px;
+}
+
+/* Widget chiếm 2 cột x 2 hàng */
+.widget-large-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: #f0f4ff;
+    border-color: #c7d2fe;
+}
+
+/* Widget ngang chiếm 2 cột */
+.widget-wide {
+    grid-column: span 2;
+}
+
+/* Responsive cho CSS Grid */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .widget-large-2x2 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .widget-large-2x2,
+    .widget-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
